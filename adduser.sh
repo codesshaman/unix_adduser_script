@@ -16,8 +16,7 @@ package_manager="apt"
 # Функция установки необходимого софта:
 $package_manager update
 $package_manager upgrade
-$package_manager install docker && \
-docker-compose sudo
+$package_manager install docker docker-compose sudo
 # Функция создания пользователя:
 read -p "Введите имя нового пользователя: " user
 if id -u "$user" >/dev/null 2>&1; then
